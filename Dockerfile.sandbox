@@ -1,0 +1,5 @@
+# Optional hardened sandbox:  docker build -f Dockerfile.sandbox -t rdd-agent-sandbox .
+# Then run the agent with:    python cli.py --sandbox docker ...
+FROM python:3.11-slim
+RUN pip install --no-cache-dir pytest pillow
+WORKDIR /work
